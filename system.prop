@@ -10,8 +10,8 @@ log.tag=I
 ro.sf.blurs_are_expensive=1
 
 # SkiaGL Threaded
-debug.renderengine.backend=skiaglthreaded
-debug.hwui.renderer=skiagl
+debug.renderengine.backend=skiavkthreaded
+debug.hwui.renderer=skiavk
 renderthread.skia.reduceopstasksplitting=true
 
 # RIL Powersaving
