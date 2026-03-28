@@ -5,4 +5,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/infinity_sea.mk
+    $(LOCAL_DIR)/lineage_sea.mk
