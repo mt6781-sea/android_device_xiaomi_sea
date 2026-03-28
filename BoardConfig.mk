@@ -5,7 +5,6 @@
 #
 
 DEVICE_PATH := device/xiaomi/sea
-KERNEL_PATH := kernel/xiaomi/mt6781
 
 # Enable 64-bit for non-zygote.
 ZYGOTE_FORCE_64 := true
