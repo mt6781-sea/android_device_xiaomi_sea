@@ -352,7 +352,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH) \
     hardware/mediatek \
-    hardware/mediatek/libaedv \
     hardware/mediatek/libmtkperf_client \
     hardware/xiaomi \
     hardware/google/pixel \
