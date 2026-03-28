@@ -384,16 +384,3 @@ PRODUCT_COPY_FILES += \
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/sea/sea-vendor.mk)
-
-# Dolby
-$(call inherit-product, hardware/dolby/dolby.mk)
-
-# Maintainer Name
-INFINITY_MAINTAINER := doissM
-
-# Whether the device supports Fingerprint On Display
-TARGET_HAS_UDFPS := false
-
-# Whether Including Google Apps
-WITH_GAPPS := true
-TARGET_USES_PICO_GAPPS := true
