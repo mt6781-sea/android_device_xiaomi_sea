@@ -22,7 +22,6 @@ extract_utils.tools.DEFAULT_PATCHELF_VERSION = '0_17_2'
 
 namespace_imports = [
 	'device/xiaomi/sea',
-    'device/xiaomi/sea/libaedv'
 	'hardware/mediatek',
 	'hardware/mediatek/libmtkperf_client',
 	'hardware/xiaomi',

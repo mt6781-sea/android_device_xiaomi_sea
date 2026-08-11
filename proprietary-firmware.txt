@@ -1,5 +1,6 @@
 # Firmware from V816.0.16.0.UHZMIXM (fastboot)
 audio_dsp.img;AB
+lk.img;AB
 gz.img;AB
 logo.bin:logo.img;AB
 md1img.img;AB
@@ -9,6 +10,3 @@ scp.img;AB
 spmfw.img;AB
 sspm.img;AB
 tee.img;AB
-
-# Little kernel from V14.0.7.0.THZMIXM (fastboot)
-lk.img;AB|fce2e9b4abca10105370c61ed85e043b932a8c90
