@@ -26,8 +26,8 @@ PRODUCT_SYSTEM_DEVICE := sea
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="sea_global-user 14 UP1A.230905.011 V816.0.16.0.UHZMIXM release-keys" \
-    BuildFingerprint=Redmi/sea_global/sea:14/UP1A.230905.011/V816.0.16.0.UHZMIXM:user/release-keys \
+    BuildDesc="sea_global-user 15 AP3A.240905.015.A2 OS2.0.215.0.VHZMIXM release-keys" \
+    BuildFingerprint=Redmi/sea_global/sea:15/AP3A.240905.015.A2/OS2.0.215.0.VHZMIXM:user/release-keys \
     SystemModel=$(PRODUCT_SYSTEM_DEVICE) \
     SystemName=$(PRODUCT_SYSTEM_NAME) \
     ProductModel=$(PRODUCT_SYSTEM_DEVICE) \

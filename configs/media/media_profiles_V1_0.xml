@@ -1688,12 +1688,12 @@
         minFrameWidth="176" maxFrameWidth="2560"
         minFrameHeight="144" maxFrameHeight="1440"
         minFrameRate="15" maxFrameRate="30" />
-    <VideoEncoderCap name="h263" enabled="true"
+    <VideoEncoderCap name="h263" enabled="false"
         minBitRate="64000" maxBitRate="2000000"
         minFrameWidth="176" maxFrameWidth="640"
         minFrameHeight="144" maxFrameHeight="480"
         minFrameRate="15" maxFrameRate="30" />
-    <VideoEncoderCap name="m4v" enabled="true"
+    <VideoEncoderCap name="m4v" enabled="false"
         minBitRate="64000" maxBitRate="4000000"
         minFrameWidth="176" maxFrameWidth="640"
         minFrameHeight="144" maxFrameHeight="480"

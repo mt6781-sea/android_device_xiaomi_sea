@@ -1,0 +1,3 @@
+ro.nnapi.extensions.deny_on_product=true
+ro.support_one_handed_mode=true
+ro.surface_flinger.supports_background_blur=1

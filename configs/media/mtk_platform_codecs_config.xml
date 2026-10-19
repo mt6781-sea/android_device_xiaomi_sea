@@ -13,13 +13,11 @@
                type="video/3gpp"
                driverIntf="v4l2"
                maxConcurrentInstances="32" />
-       <!-- longcheer luzaiyang  publish following codecs' concurrent instances limit -->
         <Video name="c2.mtk.avc.decoder"
                type="video/avc"
                driverIntf="v4l2"
                maxConcurrentInstances="32"
                metaBufferSize="4096" />
-       <!-- longcheer luzaiyang  publish following codecs' concurrent instances limit -->
         <Video name="c2.mtk.avc.decoder.secure"
                type="video/avc"
                driverIntf="v4l2"
@@ -29,7 +27,6 @@
                driverIntf="v4l2"
                maxConcurrentInstances="32"
                metaBufferSize="4096" />
-       <!-- longcheer luzaiyang  publish following codecs' concurrent instances limit -->
         <Video name="c2.mtk.hevc.decoder.secure"
                type="video/hevc"
                driverIntf="v4l2"
@@ -47,7 +44,6 @@
                type="video/x-vnd.on2.vp9"
                driverIntf="v4l2"
                maxConcurrentInstances="32" />
-       <!-- longcheer luzaiyang  publish following codecs' concurrent instances limit -->
         <Video name="c2.mtk.vp9.decoder.secure"
                type="video/x-vnd.on2.vp9"
                driverIntf="v4l2"
@@ -67,31 +63,24 @@
                maxConcurrentInstances="32" />-->
     </Decoders>
     <Encoders>
-        <Video name="c2.mtk.h263.encoder"
-               type="video/3gpp"
-               driverIntf="v4l2"
-               maxConcurrentInstances="10"
-               canSwapWidthHeight="true" />
-        <Video name="c2.mtk.mpeg4.encoder"
-               type="video/mp4v-es"
-               driverIntf="v4l2"
-               maxConcurrentInstances="10"
-               canSwapWidthHeight="true" />
         <Video name="c2.mtk.avc.encoder"
                type="video/avc"
                driverIntf="v4l2"
                maxConcurrentInstances="10"
-               canSwapWidthHeight="true" />
+			   canSwapWidthHeight="true"
+			   reencodeSupported="false" />
         <Video name="c2.mtk.avc.encoder.secure"
                type="video/avc"
                driverIntf="v4l2"
                maxConcurrentInstances="10"
-               canSwapWidthHeight="true" />
+			   canSwapWidthHeight="true"
+			   reencodeSupported="false" />
         <Video name="c2.mtk.hevc.encoder"
                type="video/hevc"
                driverIntf="v4l2"
                maxConcurrentInstances="10"
-               canSwapWidthHeight="true" />
+			   canSwapWidthHeight="true" 
+			   reencodeSupported="false" />
         <Video name="c2.mtk.heif.encoder"
                type="image/vnd.android.heic"
                driverIntf="v4l2"

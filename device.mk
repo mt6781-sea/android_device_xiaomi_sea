@@ -18,11 +18,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 # Inherit common MediaTek IMS
 $(call inherit-product, vendor/mediatek/ims/ims.mk)
 
-# Strip the local variable table and the local variable type table to reduce
-# the size of the system image. This has no bearing on stack traces, but will
-# leave less information available via JDWP.
-PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
-
 # A/B
 PRODUCT_PACKAGES += \
     com.android.hardware.boot \
@@ -74,53 +69,24 @@ PRODUCT_COPY_FILES += \
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 30
 
-PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
-
-# Use a profile based boot image for this device. Note that this is currently a
-# generic profile and not Android Go optimized.
-PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
-PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/boot/boot-image-profile.txt
-
-# Do not generate libartd.
-PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
-
-# Strip the local variable table and the local variable type table to reduce
-# the size of the system image. This has no bearing on stack traces, but will
-# leave less information available via JDWP.
-PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
-
-# Dex - Debug
-ART_BUILD_TARGET_NDEBUG := true
-ART_BUILD_TARGET_DEBUG := false
-ART_BUILD_HOST_NDEBUG := true
-ART_BUILD_HOST_DEBUG := false
-PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
-PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
-USE_DEX2OAT_DEBUG := false
-
-# Preopt critical applications
-PRODUCT_DEXPREOPT_SPEED_APPS += \
-    Settings \
-    SystemUI
-
 # Audio
 TARGET_EXCLUDES_AUDIOFX := true
 
 PRODUCT_PACKAGES += \
     android.hardware.audio.service \
-    android.hardware.audio@7.0-impl:32 \
-    android.hardware.audio.effect@7.0-impl:32 \
+    android.hardware.audio@7.0-impl:64 \
+    android.hardware.audio.effect@7.0-impl:64 \
 
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth.audio-impl:32 \
+    android.hardware.bluetooth.audio-impl:64 \
 
 PRODUCT_PACKAGES += \
-    android.hardware.soundtrigger@2.3-impl:32
+    android.hardware.soundtrigger@2.3-impl:64
 
 PRODUCT_PACKAGES += \
-    audio.bluetooth.default:32 \
-    audio.usb.default:32 \
-    audio_policy.stub:32 \
+    audio.bluetooth.default:64 \
+    audio.usb.default:64 \
+    audio_policy.stub:64 \
     audio.primary.default:64
 
 PRODUCT_COPY_FILES += \
@@ -146,10 +112,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.front.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.front.xml \
     frameworks/native/data/etc/android.hardware.camera.full.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.full.xml \
     frameworks/native/data/etc/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml
-
-# Configstore
-PRODUCT_PACKAGES += \
-    disable_configstore
 
 # Control groups/Task profiles
 PRODUCT_COPY_FILES += \
@@ -220,23 +182,40 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     IFAAService
 
+# Rootdir
+PRODUCT_PACKAGES += \
+    init.insmod.sh \
+    init.pstore_blk.sh
+
 # Init
 PRODUCT_PACKAGES += \
+    fstab.emmc \
+    factory_init.connectivity.common.rc \
+    factory_init.connectivity.rc \
+    factory_init.project.rc \
+    factory_init.rc \
+    init.ago.rc \
+    init.cgroup.rc \
+    init.connectivity.common.rc \
     init.connectivity.rc \
     init.modem.rc \
     init.mt6781.rc \
-    init.mt6781.power.rc \
-    init.mt6781.thermal.rc \
     init.mt6781.usb.rc \
-    init.nfc.ksrn.rc \
+    init.mtkgki.rc \
     init.project.rc \
+    init.sea.power.rc \
     init.sensor_1_0.rc \
-    init.zram.rc \
+    init.stnfc.rc \
+    init_connectivity.rc \
+    meta_init.connectivity.common.rc \
+    meta_init.connectivity.rc \
+    meta_init.modem.rc \
+    meta_init.project.rc \
+    meta_init.rc \
+    meta_init.vendor.rc \
     init.recovery.mt6781.rc \
-    ueventd.mt6781.rc \
     fstab.mt6781 \
-    fstab.mt6781.ramdisk \
-    fstab.zram
+    fstab.mt6781.vendor_ramdisk
 
 # Keymaster
 PRODUCT_PACKAGES += \

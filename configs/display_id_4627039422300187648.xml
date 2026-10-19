@@ -1,13 +1,6 @@
 <?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<!-- MIUI ADD: Adapt_MIUIAdaptFrame -->
 <displayConfiguration>
-    <!-- Density Mapping -->
-    <densityMapping>
-        <density>
-            <height>1080</height>
-            <width>2400</width>
-            <density>420</density>
-        </density>
-    </densityMapping>
     <!-- Global Brightness-Nit mapping -->
     <screenBrightnessMap>
         <point>
@@ -35,6 +28,11 @@
             <timeMaxSecs>0</timeMaxSecs>
             <timeMinSecs>0</timeMinSecs>
         </timing>
+        <!--Refresh rate limitation when the device is in HBM -->
+        <!-- <refreshRate>
+            <minimum>0</minimum>
+            <maximum>0</maximum>
+        </refreshRate> -->
         <!-- Thermal limitation for HBM -->
         <thermalStatusLimit>critical</thermalStatusLimit>
         <!-- Low power mode limitation for HBM -->
@@ -54,4 +52,4 @@
     <ambientLightHorizonLong>3000</ambientLightHorizonLong>
     <ambientLightHorizonShort>1000</ambientLightHorizonShort>
 </displayConfiguration>
-
+<!-- END Adapt_MIUIAdaptFrame -->
