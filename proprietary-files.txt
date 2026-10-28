@@ -1387,8 +1387,6 @@ vendor/etc/vintf/manifest/android.hardware.neuralnetworks-shim-service-mtk.xml
 vendor/etc/vintf/manifest/manifest_apuware_utils_aidl.xml
 vendor/etc/armnn_app.config
 vendor/etc/nnapi_powerhal.json
-vendor/lib64/mt6781/libmmagent.so
-vendor/lib64/mt6781/libneuron_adapter_mgvi.so
 vendor/lib64/APUWareUtilsAidlServer.so
 vendor/lib64/libapu_mdw.so
 vendor/lib64/libarmnn.so
@@ -1458,14 +1456,7 @@ vendor/bin/hw/vendor.mediatek.hardware.mmlpq@V1-service
 vendor/bin/hw/vendor.mediatek.hardware.pq_aidl-service
 vendor/etc/init/vendor.mediatek.hardware.pq_aidl-service.rc
 vendor/etc/pq_flag.xml
-vendor/lib/libappgamepq.so
-vendor/lib/libpq_cust_base.so
-vendor/lib/libscltm.so
 vendor/lib64/hw/vendor.mediatek.hardware.pq_aidl-impl.so
-vendor/lib64/mt6781/libmmlpqImpl.so
-vendor/lib64/mt6781/libpq_sec.so
-vendor/lib64/mt6781/libpqparamparser.so
-vendor/lib64/mt6781/libscltm.so
 vendor/lib64/libappgamepq.so
 vendor/lib64/libmmlpqImpl.so
 vendor/lib64/libpq_cust_base.so
@@ -1660,8 +1651,6 @@ system_ext/lib64/libimsma.so
 system_ext/lib64/libimsma_adapt.so
 system_ext/lib64/libimsma_rtp.so
 system_ext/lib64/libimsma_socketwrapper.so
-system_ext/lib64/vendor.mediatek.hardware.videotelephony-V1-ndk.so
-system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so;MODULE_SUFFIX=_vendor
 vendor/bin/hw/vtservice_aidl
 vendor/bin/bip
 vendor/bin/charon
