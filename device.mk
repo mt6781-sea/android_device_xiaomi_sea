@@ -74,14 +74,14 @@ TARGET_EXCLUDES_AUDIOFX := true
 
 PRODUCT_PACKAGES += \
     android.hardware.audio.service \
-    android.hardware.audio@7.0-impl:64 \
+    android.hardware.audio@6.0-impl:64 \
     android.hardware.audio.effect@7.0-impl:64 \
 
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio-impl:64 \
 
 PRODUCT_PACKAGES += \
-    android.hardware.soundtrigger@2.3-impl:64
+    android.hardware.soundtrigger3-impl:64
 
 PRODUCT_PACKAGES += \
     audio.bluetooth.default:64 \
@@ -127,7 +127,7 @@ PRODUCT_COPY_FILES += \
 
 # Display
 PRODUCT_PACKAGES += \
-    android.hardware.graphics.composer@2.3-service \
+    android.hardware.graphics.composer@3.3-service \
     android.hardware.memtrack-service.mediatek-mali
 
 PRODUCT_COPY_FILES += \
@@ -167,7 +167,7 @@ PRODUCT_COPY_FILES += \
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
-    android.hardware.gatekeeper@1.0-service
+    android.hardware.gatekeeper-service.beanpod
 
 # GNSS
 PRODUCT_COPY_FILES += \

@@ -61,7 +61,7 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libhidlbase.so', 'libhidlbase-v32.so'),
 
     'vendor/lib64/hw/hwcomposer.mtk_common.so': blob_fixup()
-        .add_needed('libprocessgroup_shim.so'),
+        .add_needed('libprocessgroup_shim.so')
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
 
     'vendor/lib64/libmnl.so': blob_fixup()
