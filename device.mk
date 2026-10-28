@@ -15,9 +15,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 # Inherit virtual_ab_ota product
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
-# Inherit common MediaTek IMS
-$(call inherit-product, vendor/mediatek/ims/ims.mk)
-
 # A/B
 PRODUCT_PACKAGES += \
     com.android.hardware.boot \
@@ -329,7 +326,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH) \
     hardware/mediatek \
-    hardware/mediatek/libaedv \
     hardware/mediatek/libmtkperf_client \
     hardware/xiaomi \
     hardware/google/pixel \
