@@ -3,16 +3,14 @@
 # Audio
 system_ext/bin/hw/android.hardware.audio.parameter_parser.service
 system_ext/etc/init/android.hardware.audio.parameter_parser.service.rc
+system/lib64/av-audio-types-aidl-V1-ndk.so
 vendor/bin/hw/android.hardware.audio.service-aidl.mediatek
-vendor/bin/audiocmdservice_atci
 vendor/etc/init/android.hardware.audio.service-aidl.mediatek.rc
-vendor/etc/init/audiocmdservice_atci.rc
 vendor/etc/vintf/manifest/android.hardware.audio.effect.service-aidl.xml
 vendor/etc/vintf/manifest/android.hardware.audio.service-aidl.xml
 vendor/lib64/hw/android.hardware.soundtrigger3-impl.so
 vendor/lib64/hw/audio.primary.default.so
 vendor/lib64/hw/audio.primary.mt6781.so
-vendor/lib64/hw/audio.r_submix.default.so
 vendor/lib64/hw/audio.r_submix.mt6781.so
 vendor/lib64/hw/audio.usb.default.so
 vendor/lib64/hw/sound_trigger.primary.default.so
@@ -21,11 +19,7 @@ vendor/lib64/libMtkSpeechEnh.so
 vendor/lib64/libMtkSpeechEnh_swb.so
 vendor/lib64/lib_iir.so
 vendor/lib64/libaedv.so
-vendor/lib64/libalsautils.so
-vendor/lib64/libalsautilsv2.so
-vendor/lib64/libaudio_aidl_conversion_common_ndk.so
 vendor/lib64/libaudio_param_parser-vnd.so
-vendor/lib64/libaudioaidlcommon.so
 vendor/lib64/libaudiocompensationfilter_vendor.so
 vendor/lib64/libaudiocompensationfilterc.so
 vendor/lib64/libaudiocomponentengine_vendor.so
@@ -43,9 +37,7 @@ vendor/lib64/libblisrc32_vendor.so
 vendor/lib64/libbwc.so
 vendor/lib64/libcvsd_mtk.so
 vendor/lib64/libfft_vendor.so
-vendor/lib64/libflatbuffers-cpp.so
 vendor/lib64/libfsmsmartpaparse.so
-vendor/lib64/libmediautils_vendor.so
 vendor/lib64/libmisight.so
 vendor/lib64/libmsbc_mtk.so
 vendor/lib64/libmtklimiter_vendor.so
@@ -56,8 +48,6 @@ vendor/lib64/libnxp_extamp_intf.so
 vendor/lib64/librt_extamp_intf.so
 vendor/lib64/libspeech_enh_lib.so
 vendor/lib64/libspeechparser_vendor.so
-vendor/lib64/libtinyalsav2.so
-vendor/lib64/vendor.mediatek.hardware.audio-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.audio@6.1.so
 
 # Audio calibration
@@ -199,8 +189,6 @@ vendor/etc/init/init.bt_drv.rc
 vendor/firmware/BT_FW.cfg
 vendor/firmware/soc2_2_ram_bt_2_1_hdr.bin
 vendor/firmware/soc2_2_ram_bt_2a_1_hdr.bin
-vendor/lib/libbluetooth_mtk.so
-vendor/lib/libbt-vendor.so
 vendor/lib64/libbluetooth_mtk.so
 vendor/lib64/libbluetooth_mtk_pure.so
 vendor/lib64/libbluetooth_relayer.so
@@ -208,26 +196,18 @@ vendor/lib64/libbluetoothem_mtk.so
 vendor/lib64/libbt-vendor.so
 
 # Bluetooth (A2DP)
-vendor/etc/aidl/hfp/hfp_codec_capabilities.xml
-vendor/etc/aidl/le_audio/aidl_audio_set_configurations.bfbs
+vendor/etc/a2dp_audio_policy_configuration.xml
+vendor/etc/a2dp_in_audio_policy_configuration.xml
 vendor/etc/aidl/le_audio/aidl_audio_set_configurations.json
-vendor/etc/aidl/le_audio/aidl_audio_set_scenarios.bfbs
 vendor/etc/aidl/le_audio/aidl_audio_set_scenarios.json
-vendor/etc/vintf/manifest/bluetooth_audio.xml
+vendor/etc/vintf/manifest/bluetooth_audio.xml:vendor/etc/vintf/manifest/bluetooth_audio_mtk.xml
 vendor/etc/le_audio_codec_capabilities.xml
 vendor/lib64/hw/android.hardware.bluetooth.audio@2.0-impl.so
 vendor/lib64/hw/android.hardware.bluetooth.audio@2.1-impl.so
-vendor/lib64/hw/audio.bluetooth.default.so
 vendor/lib64/hw/vendor.mediatek.hardware.bluetooth.audio@2.1-impl.so
 vendor/lib64/hw/vendor.mediatek.hardware.bluetooth.audio@2.2-impl.so
-vendor/lib64/libaconfig_storage_read_api_cc.so
-vendor/lib64/libbluetooth_audio_session.so
-vendor/lib64/libbluetooth_audio_session_aidl.so
 vendor/lib64/libbluetooth_audio_session_aidl_mtk.so
 vendor/lib64/libbluetooth_audio_session_mediatek.so
-vendor/lib64/vendor.mediatek.hardware.bluetooth.audio-V1-ndk.so
-vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.1.so
-vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.2.so
 
 # Camera
 vendor/bin/hw/camerahalserver
@@ -1065,12 +1045,17 @@ vendor/lib64/egl/libMEOW_qt.so
 vendor/lib64/egl/libMEOW_trace.so
 vendor/lib64/hw/displayfeature.default.so
 vendor/lib64/hw/gralloc.default.so
+vendor/lib64/hw/android.hardware.graphics.allocator-V2-mediatek.so
 vendor/lib64/hw/hwcomposer.mt6781.so:vendor/lib64/hw/hwcomposer.mtk_common.so;FIX_SONAME
 vendor/lib64/hw/mapper.mediatek.so
 vendor/lib64/hw/vulkan.mali.so
+vendor/lib64/mt6781/libmmagent.so;SYMLINK=vendor/lib64/libmmagent.so
+vendor/lib64/mt6781/libmmlpqImpl.so;SYMLINK=vendor/lib64/libmmlpqImpl.so
+vendor/lib64/mt6781/libneuron_adapter_mgvi.so;SYMLINK=vendor/lib64/libneuron_adapter_mgvi.so
+vendor/lib64/mt6781/libnir_neon_driver.so;SYMLINK=vendor/lib64/libnir_neon_driver.so
+vendor/lib64/mt6781/libscltm.so;SYMLINK=vendor/lib64/libscltm.so
 vendor/lib64/mt6781/libdpframework.so:vendor/lib64/libdpframework.so
 vendor/lib64/mt6781/libmtk_drvb.so:vendor/lib64/libmtk_drvb.so
-vendor/lib64/mt6781/libnir_neon_driver.so:vendor/lib64/libnir_neon_driver.so
 vendor/lib64/arm.graphics-V5-ndk.so
 vendor/lib64/arm.mali.platform-V2-ndk.so
 vendor/lib64/libDefaultFpsActor.so
@@ -1132,9 +1117,6 @@ vendor/etc/screen_light.xml
 
 # DRM
 vendor/apex/com.google.android.widevine.nonupdatable.apex
-vendor/bin/hw/android.hardware.drm-service.clearkey
-vendor/etc/init/android.hardware.drm-service.clearkey.rc
-vendor/etc/vintf/manifest/android.hardware.drm-service.clearkey.xml
 vendor/lib/mediacas/libclearkeycasplugin.so
 vendor/lib/mediadrm/libdrmclearkeyplugin.so
 vendor/lib/mediadrm/libmockdrmcryptoplugin.so
@@ -1168,19 +1150,14 @@ vendor/firmware/mt6635_fm_v1_patch.bin
 vendor/bin/hw/android.hardware.gatekeeper-service.beanpod
 vendor/bin/hw/vendor.microtrust.hardware.thh@2.0-service
 vendor/bin/init_thh
-vendor/bin/mrmd_isee
-vendor/bin/mtk_storageproxyd
 vendor/bin/teei_daemon
 vendor/bin/trusty-ut-ctrl
 vendor/etc/init/android.hardware.gatekeeper-service.beanpod.rc
 vendor/etc/init/microtrust.init_thh.rc
 vendor/etc/init/microtrust.rc
 vendor/etc/init/mrm_isee.rc
-vendor/etc/init/mtk_storageproxyd.rc
 vendor/etc/init/vendor.microtrust.hardware.thh@2.0-service.rc
 vendor/etc/vintf/manifest/android.hardware.gatekeeper-service.beanpod.xml
-vendor/etc/vintf/manifest/manifest_thh.xml
-vendor/etc/vintf/manifest/mrm.xml
 vendor/lib/libTEECommon.so
 vendor/lib/libimsg_log.so
 vendor/lib/libteei_daemon_vfs.so
@@ -1194,7 +1171,6 @@ vendor/lib64/libimsg_log.so
 vendor/lib64/libmiriskmanager_isee.so
 vendor/lib64/libteei_daemon_vfs.so
 vendor/lib64/libthhclient.so
-vendor/lib64/libtrusty.so
 vendor/lib64/vendor.microtrust.hardware.thh@2.0.so
 vendor/lib64/wechat.beanpod.so
 
@@ -1241,11 +1217,8 @@ vendor/lib64/hw/gps.default.so
 vendor/lib64/hw/vendor.mediatek.hardware.gnss-impl.so
 vendor/lib64/libDR.so
 vendor/lib64/libapmonitor_vendor.so
-vendor/lib64/libmnl.so
 vendor/lib64/mtk_lbs_service-impl.so
 vendor/lib64/vendor.mediatek.hardware.gnss-V2-ndk.so
-vendor/lib64/vendor.mediatek.hardware.lbs-V1-ndk.so
-vendor/lib64/vendor.mediatek.hardware.lbs@1.0.so
 
 # GNSS configs
 vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_ATnT_Mexico.xml
@@ -1291,17 +1264,10 @@ vendor/etc/init/microtrust.bp_kmsetkey_ca.rc
 vendor/lib/hw/kmsetkey.beanpod.so
 vendor/lib64/hw/id_attestation.beanpod.so
 vendor/lib64/hw/kmsetkey.beanpod.so
-vendor/lib64/libcppbor.so
-vendor/lib64/libcppcose_rkp.so
-vendor/lib64/libkeymaster4.so
-vendor/lib64/libkeymaster41.so
-vendor/lib64/libkeymaster4_1support.so
 vendor/lib64/libkmsetkey.so
-vendor/lib64/libsoft_attestation_cert.so
 
 # MBrain
 vendor/bin/hw/vendor.mediatek.hardware.mbrain-service.mediatek
-vendor/etc/init/mbrain-mtk-default.rc
 vendor/etc/mbrain/mbrain_runtime_appiot_config.bin
 vendor/etc/mbrain/mbrain_runtime_autort_config.bin
 vendor/etc/mbrain/mbrain_runtime_concurrencytable_config.bin
@@ -1343,16 +1309,9 @@ vendor/lib64/AVCSecureVdecCA.so
 vendor/lib64/HEVCSecureVdecCA.so
 vendor/lib64/VP9SecureVdecCA.so
 vendor/lib64/libAVCSecureVencCA.so
-vendor/lib64/libcodec2_aidl.so
-vendor/lib64/libcodec2_fsr.so
-vendor/lib64/libcodec2_hal_common.so
-vendor/lib64/libcodec2_hidl@1.1.so
-vendor/lib64/libcodec2_hidl@1.2.so
-vendor/lib64/libcodec2_hidl_plugin.so
 vendor/lib64/libcodec2_mtk_c2store.so
 vendor/lib64/libcodec2_mtk_vdec.so
 vendor/lib64/libcodec2_mtk_venc.so
-vendor/lib64/libcodec2_soft_common.so
 vendor/lib64/libcodec2_vpp_fa_plugin.so
 vendor/lib64/libcodec2_vpp_mi_plugin.so
 vendor/lib64/libcodec2_vpp_qt_plugin.so
@@ -1361,9 +1320,6 @@ vendor/lib64/libformatter.so
 vendor/lib64/libmp4enc_sa.ca7.so
 vendor/lib64/libmvpu_config_data.so
 vendor/lib64/libmvpu_wrapper.so
-vendor/lib64/libsfplugin_ccodec_utils.so
-vendor/lib64/libstagefright_aidl_bufferpool2.so
-vendor/lib64/libstagefright_bufferpool@2.0.1.so
 vendor/lib64/libswtcc.so
 vendor/lib64/libthha.so
 vendor/lib64/libvcodec_oal.so;DISABLE_CHECKELF
@@ -1396,13 +1352,10 @@ vendor/lib64/libasn1c_mapi.so
 vendor/lib64/libasn1c_mdmi.so
 vendor/lib64/libcmdl.so
 vendor/lib64/libcmdl_ndk.mtk.vndk.so
-vendor/lib64/libmmagent.so
 vendor/lib64/libneuralnetworks_sl_driver_mtk_legacy_prebuilt.so
 vendor/lib64/libneuroeara.so
-vendor/lib64/libneuron_adapter_mgvi.so
 vendor/lib64/libnir_neon_driver_ndk.mtk.vndk.so
 vendor/lib64/libnputils.so
-vendor/lib64/libruy.so
 vendor/lib64/libtflite_mtk.so
 vendor/lib64/vendor.mediatek.hardware.apuware.utils-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.mmagent-V1-ndk.so
@@ -1410,7 +1363,6 @@ vendor/lib64/vendor.mediatek.hardware.mmagent@1.0.so
 vendor/lib64/vendor.mediatek.hardware.mmagent@1.1.so
 
 # NFC
-vendor/bin/nfcstackp-vendor
 vendor/etc/st21nfc_conf.txt
 vendor/firmware/st21nfc_fw7.bin
 vendor/lib/libstfactory-vendor.so
@@ -1446,8 +1398,6 @@ vendor/lib64/vendor.mediatek.hardware.nvram@1.0.so
 vendor/lib64/vendor.mediatek.hardware.nvram@1.1.so
 
 # Payment (Xiaomi)
-vendor/lib/libteeclientjni.so
-vendor/lib/libteeclientjni@1.1.so
 vendor/lib64/libteeclientjni.so
 vendor/lib64/libteeclientjni@1.1.so
 
@@ -1458,16 +1408,13 @@ vendor/etc/init/vendor.mediatek.hardware.pq_aidl-service.rc
 vendor/etc/pq_flag.xml
 vendor/lib64/hw/vendor.mediatek.hardware.pq_aidl-impl.so
 vendor/lib64/libappgamepq.so
-vendor/lib64/libmmlpqImpl.so
 vendor/lib64/libpq_cust_base.so
-vendor/lib64/libpq_sec.so
 vendor/lib64/libpqframework.so
 vendor/lib64/libpqhdrmetaparser.so
 vendor/lib64/libpqparamparser.so
 vendor/lib64/libpqsharememory.so
 vendor/lib64/libpqtuning.so
 vendor/lib64/libpqxmlparser.so
-vendor/lib64/libscltm.so
 vendor/lib64/libsdrparser.so
 vendor/lib64/vendor.mediatek.hardware.mmlpq-V3-ndk.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.0.so
@@ -1488,12 +1435,8 @@ vendor/lib64/vendor.mediatek.hardware.pq_aidl-V7-ndk.so
 
 # Power
 vendor/etc/init/bootperf.rc
-vendor/etc/init/init.fpsgo.rc
 vendor/etc/init/mtkpower_applist-mtk-default.rc
 vendor/etc/vintf/manifest/mtkpower_applist-mtk-default.xml
-vendor/etc/breakwhiteapplist.xml
-vendor/etc/fstb.cfg
-vendor/etc/gbe.cfg
 vendor/etc/power_app_cfg.xml
 vendor/etc/powercontable.xml
 vendor/etc/powerscntbl.xml
@@ -1501,17 +1444,12 @@ vendor/etc/xgf.cfg
 vendor/lib64/lib_power_applist.so
 vendor/lib64/libmtkperf_client_vendor.so
 vendor/lib64/libperfctl_vendor.so
-vendor/lib64/libpowerhal.so
 vendor/lib64/libpowerhalwrap_vendor.so
-vendor/lib64/vendor.mediatek.hardware.mtkpower-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.power@1.1.so
 vendor/lib64/vendor.mediatek.hardware.power@2.0.so
 
 # Radio
-system_ext/lib/vendor.mediatek.hardware.mtkradioex@3.0.so
-system_ext/lib64/vendor.mediatek.hardware.mtkradioex@3.0.so
 vendor/bin/hw/mtkfusionrild
-vendor/bin/hw/vendor.mediatek.hardware.nwk_opt@1.0-service
 vendor/bin/atcid
 vendor/bin/ccci_mdinit
 vendor/bin/ccci_rpcd
@@ -1522,25 +1460,12 @@ vendor/bin/dreport
 vendor/bin/em_hidl
 vendor/bin/gsm0710muxd
 vendor/bin/jxnosfastswitch
-vendor/bin/mtk_pkm_service
 vendor/bin/rttv
-vendor/bin/xcap
-vendor/etc/init/FastSwitch.rc
-vendor/etc/init/atcid.rc
-vendor/etc/init/dmc_core.rc
-vendor/etc/init/em_hal_user.rc
 vendor/etc/init/gsm0710muxd.rc
 vendor/etc/init/init.cccimdinit.rc
 vendor/etc/init/init.cccirpcd.rc
 vendor/etc/init/init.md_apps.rc
-vendor/etc/init/init.xcap.rc
-vendor/etc/init/mtk_pkm_service.rc
 vendor/etc/init/mtkrild.rc
-vendor/etc/init/muxreport.rc
-vendor/etc/init/networksetting.rc
-vendor/etc/init/vendor.mediatek.hardware.nwk_opt@1.0-service.rc
-vendor/etc/vintf/manifest/FastSwitch.xml
-vendor/etc/vintf/manifest/em_hal_service.xml
 vendor/lib/libcapctrl.so
 vendor/lib/libcarrierconfig.so
 vendor/lib/libccci_util.so
@@ -1555,7 +1480,6 @@ vendor/lib/libmtkproperty.so
 vendor/lib/libmtkrillog.so
 vendor/lib/libmtksysutils.so
 vendor/lib/libnwk_opt_halwrap_vendor.so
-vendor/lib/libpkm.so
 vendor/lib/libsimlock.so
 vendor/lib/libsimmelock.so
 vendor/lib/libssl-md.so
@@ -1657,8 +1581,6 @@ vendor/bin/charon
 vendor/bin/epdg_wod
 vendor/bin/ipsec_mon
 vendor/bin/rcs_volte_stack
-vendor/bin/starter
-vendor/bin/stroke
 vendor/bin/volte_clientapi_ua
 vendor/bin/volte_imcb
 vendor/bin/volte_imsm_93
@@ -1675,7 +1597,6 @@ vendor/etc/init/init.volte_stack.rc
 vendor/etc/init/init.volte_ua.rc
 vendor/etc/init/init.vtservice_aidl.rc
 vendor/etc/init/init.wfca.rc
-vendor/etc/init/init.wod.rc
 vendor/etc/init/ipsec_mon.rc
 vendor/etc/init/volte_clientapi_ua.rc
 vendor/etc/ipsec/ipsec.d/cacerts/DigiCertGlobalRootCA.crt
@@ -1728,9 +1649,6 @@ vendor/lib64/vendor.mediatek.hardware.mtkradioex.sim-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.videotelephony-V1-ndk.so
 
 # Sensors
-vendor/bin/hw/android.hardware.sensors-service.multihal
-vendor/etc/init/android.hardware.sensors-service-multihal.rc
-vendor/etc/vintf/manifest/android.hardware.sensors-multihal.xml
 vendor/firmware/remoteproc_scp
 vendor/lib/hw/sensors.dynamic_sensor_hal.so
 vendor/lib/libhidparser.so
@@ -1759,14 +1677,9 @@ vendor/lib64/vendor.microtrust.hardware.soter@1.0.so
 
 # Tether offload
 vendor/bin/hw/tetheroffloadservice
-vendor/bin/netdagent
-vendor/bin/netdc
 vendor/etc/init/android.hardware.tetheroffload-V1-service.rc
-vendor/etc/init/netdagent.rc
 vendor/etc/vintf/manifest/android.hardware.tetheroffload-V1-service.xml
 vendor/etc/throttle.sh
-vendor/lib/vendor.mediatek.hardware.netdagent-V1-ndk.so
-vendor/lib/vendor.mediatek.hardware.netdagent@1.0.so
 vendor/lib64/libforkexecwrap.so
 vendor/lib64/libifcutils_mtk.so
 vendor/lib64/vendor.mediatek.hardware.netdagent-V1-ndk.so
@@ -1775,8 +1688,6 @@ vendor/lib64/vendor.mediatek.hardware.netdagent-V1-ndk.so
 vendor/bin/mi_thermald
 vendor/bin/thermalloadalgod
 vendor/etc/init/init.mi_thermald.rc
-vendor/lib/libmtcloader.so
-vendor/lib/libthermalalgo.so
 vendor/lib64/libmtcloader.so
 vendor/lib64/libthermalalgo.so
 
@@ -1829,25 +1740,18 @@ vendor/firmware/aw8622_mid_f0_need_setup_Q_cfg.bin
 vendor/firmware/aw8622_mid_f0_need_setup_Z_cfg.bin
 
 # Wi-Fi
-vendor/bin/hw/wpa_supplicant
-vendor/bin/iwlist
-vendor/bin/iwpriv
 vendor/etc/init/init.wlan_drv.rc
-vendor/etc/vintf/manifest/CommandService.xml
 vendor/etc/command.csv
 vendor/firmware/WIFI_RAM_CODE_soc2_2_2_1.bin
 vendor/firmware/WIFI_RAM_CODE_soc2_2_2a_1.bin
 vendor/firmware/WMT_SOC.cfg
 vendor/firmware/soc2_2_ram_wifi_2_1_hdr.bin
 vendor/firmware/soc2_2_ram_wifi_2a_1_hdr.bin
-vendor/lib/libkeystore-wifi-hidl.so
-vendor/lib/libwapi.so
-vendor/lib/libwpa_client.so
-vendor/lib/meta_wifi_data.so
 vendor/lib64/libkeystore-engine-wifi-hidl.so
 vendor/lib64/libkeystore-wifi-hidl.so
 vendor/lib64/libwapi.so
 vendor/lib64/libwifi-hal.so:vendor/lib64/libwifi-hal-mtk.so;FIX_SONAME
+vendor/lib64/libmnl.so:vendor/lib64/libmnl_mtk.so;FIX_SONAME
 vendor/lib64/libwifical.so
 vendor/lib64/libwifitest.so
 vendor/lib64/libwpa_client.so
@@ -1857,40 +1761,15 @@ vendor/lib64/meta_wifi_data.so
 vendor/etc/wfd_source_capability.csv
 
 # Miscellaneous
-vendor/bin/dmabuf_dump
-vendor/bin/doeapp-memtester
-vendor/bin/doeapp-sat
-vendor/bin/dtc_vendor
-vendor/bin/factory
-vendor/bin/ffu
-vendor/bin/getfattr
-vendor/bin/getopt
 vendor/bin/iperf
-vendor/bin/meta_tst
-vendor/bin/mrdump_tool
-vendor/bin/mtk_plpath_utils_ota
-vendor/bin/recordevent
-vendor/bin/replayevent
-vendor/bin/setfattr
 vendor/etc/init/init.vendor.ins.rc
-vendor/etc/init/mi_ic.rc
-vendor/etc/init/mi_ric.rc
-vendor/etc/init/vndservicemanager.rc
-vendor/etc/aconfig_flags.pb
 vendor/etc/init.insmod.mt6781.cfg
-vendor/etc/linker.config.pb
 vendor/etc/mkshrc
 vendor/etc/partition_permission.sh
-vendor/etc/task_profiles.json
 vendor/etc/ueventd.rc
 vendor/firmware/Conf_MultipleTest.ini
-vendor/lib/libcheckpid.so
-vendor/lib/libdecrypt.so
 vendor/lib/liblogwrap_vendor.so
-vendor/lib64/libbinderdebug.so
-vendor/lib64/libcheckpid.so
 vendor/lib64/libdecrypt.so
 vendor/lib64/libdynamiclog.so
 vendor/lib64/liblogwrap_vendor.so
-vendor/lib64/libmeminfo.so
 vendor/lib64/libminiui.so
