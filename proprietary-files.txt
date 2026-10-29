@@ -51,7 +51,6 @@ vendor/lib64/libmtkspparser.so
 vendor/lib64/libmtkspparser_swb.so
 vendor/lib64/libnxp_extamp_intf.so
 vendor/lib64/librt_extamp_intf.so
-vendor/lib64/libspeech_enh_lib.so
 vendor/lib64/libspeechparser_vendor.so
 vendor/lib64/vendor.mediatek.hardware.audio@6.1.so
 
@@ -208,7 +207,6 @@ vendor/etc/a2dp_audio_policy_configuration.xml
 vendor/etc/a2dp_in_audio_policy_configuration.xml
 vendor/etc/aidl/le_audio/aidl_audio_set_configurations.json
 vendor/etc/aidl/le_audio/aidl_audio_set_scenarios.json
-vendor/etc/vintf/manifest/bluetooth_audio.xml:vendor/etc/vintf/manifest/bluetooth_audio_mtk.xml
 vendor/etc/le_audio_codec_capabilities.xml
 
 
@@ -218,7 +216,6 @@ vendor/bin/jpegtool
 vendor/bin/mt6660_calibration
 vendor/bin/rt5512_calibration
 vendor/etc/init/camerahalserver.rc
-vendor/lib/libakm.so
 vendor/lib/libpcdbi.so
 vendor/lib/libpcdmr.so
 vendor/lib64/hw/vendor.mediatek.hardware.camera.atms_aidl@1.0-impl.so
@@ -760,7 +757,6 @@ vendor/lib64/libaiawb_p1ggm.so
 vendor/lib64/libaiawb_sun.so
 vendor/lib64/libaiawb_sun_model.so
 vendor/lib64/libaimemc.so
-vendor/lib64/libakm.so
 vendor/lib64/libalCFR.so
 vendor/lib64/libalLDC.so
 vendor/lib64/libc++_shared.so
@@ -1036,11 +1032,9 @@ vendor/etc/init/android.hardware.graphics.allocator-V2-service-mediatek.rc
 vendor/etc/init/android.hardware.graphics.composer@3.3-service.rc
 vendor/etc/init/display.rc
 vendor/etc/init/gpuserv-default.rc
-vendor/etc/init/memtrack-mediatek.rc
 vendor/etc/vintf/manifest/manifest_allocator.xml
 vendor/etc/vintf/manifest/manifest_hwcomposer.xml
 vendor/etc/vintf/manifest/mapper.mediatek.xml
-vendor/etc/vintf/manifest/memtrack-mediatek.xml
 vendor/etc/mali_platform.config
 vendor/lib64/egl/libGLES_mali.so
 vendor/lib64/egl/libGLES_meow.so
@@ -1380,7 +1374,6 @@ vendor/lib64/libcmdl.so
 vendor/lib64/libcmdl_ndk.mtk.vndk.so
 vendor/lib64/libneuralnetworks_sl_driver_mtk_legacy_prebuilt.so
 vendor/lib64/libneuroeara.so
-vendor/lib64/libnir_neon_driver_ndk.mtk.vndk.so
 vendor/lib64/libnputils.so
 vendor/lib64/libtflite_mtk.so
 vendor/lib64/vendor.mediatek.hardware.apuware.utils-V1-ndk.so
@@ -1465,7 +1458,6 @@ vendor/etc/init/bootperf.rc
 vendor/etc/init/mtkpower_applist-mtk-default.rc
 vendor/etc/vintf/manifest/mtkpower_applist-mtk-default.xml
 vendor/etc/power_app_cfg.xml
-vendor/etc/powercontable.xml
 vendor/etc/powerscntbl.xml
 vendor/etc/xgf.cfg
 vendor/lib64/vendor.mediatek.hardware.power@1.1.so
@@ -1478,7 +1470,6 @@ vendor/bin/ccci_mdinit
 vendor/bin/ccci_rpcd
 vendor/bin/dmc_core
 vendor/bin/gsm0710muxd
-vendor/bin/rttv
 vendor/etc/init/gsm0710muxd.rc
 vendor/etc/init/init.cccimdinit.rc
 vendor/etc/init/init.cccirpcd.rc
@@ -1529,7 +1520,6 @@ vendor/lib64/libmtksysutils.so
 vendor/lib64/libmtktinyxml.so
 vendor/lib64/libmtkutils.so
 vendor/lib64/libnwk_opt_halwrap_vendor.so
-vendor/lib64/libpkm.so
 vendor/lib64/libratconfig.so
 vendor/lib64/librilfusion.so
 vendor/lib64/libsimlock.so
@@ -1681,11 +1671,9 @@ vendor/lib/librgbwlightsensor.so
 vendor/lib/sensors.touch.detect.so
 vendor/lib64/hw/sensors.dynamic_sensor_hal.so
 vendor/lib64/hw/android.hardware.sensors@2.X-subhal-mediatek.so
-vendor/lib64/hw/sensors.elliptic@2.0.so
 vendor/lib64/hw/sensors.mt6781.so
 vendor/lib64/libQstAlgo.so
 vendor/lib64/libhidparser.so
-vendor/lib64/libnotifyaudiohal.so
 vendor/lib64/librgbwlightsensor.so
 vendor/lib64/libsensor_custom.so
 vendor/lib64/sensors.touch.detect.so
@@ -1790,7 +1778,6 @@ vendor/etc/wfd_source_capability.csv
 vendor/bin/iperf
 vendor/etc/init/init.vendor.ins.rc
 vendor/etc/init.insmod.mt6781.cfg
-vendor/etc/mkshrc
 vendor/etc/partition_permission.sh
 vendor/etc/ueventd.rc
 vendor/firmware/Conf_MultipleTest.ini
