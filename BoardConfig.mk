@@ -69,6 +69,7 @@ BOARD_EROFS_COMPRESSOR := lz4
 BOARD_RAMDISK_USE_LZ4 := true
 
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 rcu_nocbs=all rcutree.enable_rcu_lazy log_buf_len=1024K sysctl.kernel.sched_pelt_multiplier=2 androidboot.serialconsole=0
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := sea
