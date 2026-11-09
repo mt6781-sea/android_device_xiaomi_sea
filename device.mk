@@ -67,11 +67,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SHIPPING_API_LEVEL := 30
 
 # Audio
+$(call soong_config_set,android_hardware_audio,run_64bit,true)
+$(call soong_config_set_bool,android_hardware_audio,skip_speaker_layout_channel_mask_field,true)
 TARGET_EXCLUDES_AUDIOFX := true
 
 PRODUCT_PACKAGES += \
     android.hardware.audio.service \
-    android.hardware.audio@7.1-impl \
+    android.hardware.audio@7.0-impl \
     android.hardware.audio.effect@7.0-impl \
 
 PRODUCT_PACKAGES += \
@@ -81,7 +83,28 @@ PRODUCT_PACKAGES += \
     audio.bluetooth.default:64 \
     audio.usb.default:64 \
     audio_policy.stub:64 \
+    audio.r_submix.default:64
     audio.primary.default:64
+
+PRODUCT_PACKAGES += \
+    audio_policy.stub:64 \
+    libopus.vendor:64 \
+    audioclient-types-aidl-cpp.vendor:64 \
+    libaudioroute.vendor:64 \
+    libaudiofoundation.vendor:64 \
+    libbundlewrapper:64 \
+    libbluetooth_audio_session:64 \
+    libaudiopreprocessing:64 \
+    libalsautils:64 \
+    libdownmix:64 \
+    libeffectproxy:64 \
+    libnbaio_mono:64 \
+    libtinycompress:64 \
+    libdynproc:64 \
+    libhapticgenerator:64 \
+    libldnhncr:64 \
+    libreverbwrapper:64 \
+    libprocessgroup.vendor:64
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.low_latency.xml \
